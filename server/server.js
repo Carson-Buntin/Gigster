@@ -38,7 +38,15 @@ app.post("/api/setPreformer", async (req, res) => {
         await preformer.save()
         res.status(201).json({preformer})
     } catch(e) {
-        res.status(400).json({error: e.message})
+        if (e.code === 11000) {
+            if (e.message.includes('username') || e.message.includes('email')) {
+                res.status(400).json({ error: 'Email or username already in use' });
+            } else {
+                res.status(400).json({ error: 'Duplicate key error' });
+            }
+        } else {
+            res.status(400).json({ error: e.message });
+        }
     }
 })
 

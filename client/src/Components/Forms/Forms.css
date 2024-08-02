@@ -1,12 +1,4 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #abd1c6; /* Light teal background */
-    font-family: Arial, sans-serif;
-}
+
 
 .container {
     display: flex;
@@ -56,6 +48,7 @@ html, body {
     border-radius: 5px;
     background-color: #abd1c6; /* Light teal background for input */
     width: 100%;
+    position: relative; /* Ensure that the error message is positioned relative to the input */
 }
 
 .input img {
@@ -76,6 +69,41 @@ html, body {
     color: #001e1d; /* Darker color for the placeholder text */
     opacity: 1; /* Ensure the placeholder text is fully opaque */
     font-style: italic; /* Optional: make the placeholder text italic */
+}
+
+.input.error input {
+    border: 1px solid red; /* Red border for error */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    right: 10px; /* Adjust this as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.global-error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.toggle-visibility {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 10px; /* Adjust size as needed */
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-visibility img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
 }
 
 .submit-container {
@@ -135,4 +163,3 @@ html, body {
         padding: 8px 16px;
     }
 }
-

@@ -1,12 +1,20 @@
 const mongoose = require('mongoose')
 
 const preformerSchema = new mongoose.Schema({
-    userName:{
+    username:{
         type: String,
         required: true,
         unique: true
     },
-    password: String
+    email:{
+        type: String,
+        required: true,
+        unique: true
+    },
+    password:{
+        type: String,
+        required: true
+    }
 })
 
 module.exports = mongoose.model('Preformer', preformerSchema)
