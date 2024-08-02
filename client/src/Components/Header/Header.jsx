@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../Assets/music_note.png'
+import logo from '../Assets/Gigster-Logo.png'
 import './Header.css'
 
 
