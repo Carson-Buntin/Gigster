@@ -42,11 +42,6 @@ app.post("/api/setPreformer", async (req, res) => {
     }
 })
 
-
-app.get("/api", (req, res) => {
-    res.json({ "users": ["userOne", "userTwo", "userThree", "userFour"]})
-})
-
 const start = async() => {
     try{
         await mongoose.connect(CONNECTION)

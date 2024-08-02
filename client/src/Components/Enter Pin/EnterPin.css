@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #abd1c6; /* Light teal background */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #004643; /* Dark teal background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fffffe; /* White text */
+}
+
+.underline {
+    width: 80%;
+    height: 2px;
+    background-color: #fffffe; /* White underline */
+    margin-top: 8px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #abd1c6; /* Light teal background for input */
+    width: 100%;
+}
+
+.input img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background-color: #abd1c6; /* Light teal background for input */
+}
+
+.input input::placeholder {
+    color: #001e1d; /* Darker color for the placeholder text */
+    opacity: 1; /* Ensure the placeholder text is fully opaque */
+    font-style: italic; /* Optional: make the placeholder text italic */
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.submit {
+    padding: 10px 20px;
+    background-color: #f9bc60; /* Yellow background for submit button */
+    color: #001e1d; /* Darker color for submit button text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #f1a74d; /* Slightly darker yellow on hover */
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer small {
+    color: #fffffe; /* White text */
+}
+
+.footer a {
+    color: #f9bc60; /* Yellow link */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .input {
+        padding: 8px;
+    }
+
+    .submit {
+        padding: 8px 16px;
+    }
+}
+

@@ -1,0 +1,36 @@
+.banner {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #004643; /* Dark teal background */
+    color: #fffffe; /* White text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Span the full width of the viewport */
+    position: fixed; /* Fix position to stay at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left edge */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fffffe;
+  }
+  
+  .logo-img {
+    height: 40px; /* Adjust logo size as needed */
+    margin-right: 10px;
+  }
+  
+  .app-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Ensure body content is not hidden behind the banner */
+  body {
+    margin: 0;
+    padding-top: 60px; /* Adjust based on banner height */
+  }

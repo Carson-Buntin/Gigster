@@ -1,30 +1,19 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { EnterPin } from "./Components/Enter Pin/EnterPin";
+import { Login } from './Components/Login/Login';
+import { Header } from "./Components/Header/Header";
+
 
 function App() {
-
-  const [backendData, setBackendData] = useState([{}])
-
-  useEffect(() => {
-    fetch("/api").then(
-      responce => responce.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
-    )
-  }, [])
-
   return (
-    <div>
-      {(typeof backendData.users === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.users.map((user, i) => (
-          <p key={i}>{user}</p>
-        ))
-      )}
-
-    </div>
+    <Router>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<EnterPin />} />
+        <Route path="/Login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
