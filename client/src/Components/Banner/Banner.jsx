@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../Assets/Gigster-Logo.png'
-import './Header.css'
+import './Banner.css'
 
 
 
-export const Header = () => {
+export const Banner = () => {
   return (
     <header className="banner">
         <Link to="/" className="logo">

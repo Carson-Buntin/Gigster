@@ -2,13 +2,13 @@ import React from "react"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { EnterPin } from "./Components/Enter Pin/EnterPin";
 import { Login } from './Components/Login/Login';
-import { Header } from "./Components/Header/Header";
+import { Banner } from "./Components/Banner/Banner";
 
 
 function App() {
   return (
     <Router>
-      <Header/>
+      <Banner/>
       <Routes>
         <Route path="/" element={<EnterPin />} />
         <Route path="/Login" element={<Login />} />
